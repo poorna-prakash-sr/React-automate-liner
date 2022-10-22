@@ -1,0 +1,23 @@
+{
+    "FolderStructure":
+    {
+        "MainFolder": "src",
+        "ComponentFolder" : "src/Component",
+        "AssetsFolder" : "src/assests",
+        "LayoutFolder" : "src/layout",
+        "RouteFolder" : "src/routes",
+        "ServicesFolder" : {
+            "path":"src/services",
+            "default":false
+        },
+        "PagesFolder" : {
+            "path":"src/pages",
+            "default":false
+        },
+        "ConfigFolder" : {
+            "path":"src/config",
+            "default": false
+        }
+        
+    }
+}
