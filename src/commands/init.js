@@ -10,6 +10,7 @@ const createafolder = (filename, confirm = true) => {
   if (confirm) {
     if (!fs.existsSync(path.join(__dirname, '../../' + filename)) && confirm) {
       fs.mkdirSync(path.join(__dirname, '../../' + filename));
+
       return console.log(
         chalk.green('Created a ') +
           chalk.yellow(filename) +
