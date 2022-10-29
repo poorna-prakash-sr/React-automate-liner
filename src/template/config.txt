@@ -3,7 +3,7 @@
     {
         "MainFolder": "r/src",
         "ComponentFolder" : "r/src/components",
-        "AssetsFolder" : "r/src/assets",
+        "AssetsFolder" : "r/src/assests",
         "LayoutFolder" : "r/src/layout",
         "RouteFolder" : "r/src/routes",
         "ServicesFolder" : {

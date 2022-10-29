@@ -3,6 +3,7 @@ const chalk = require('chalk');
 const prompt = require('prompt-sync')();
 var shell = require('shelljs');
 const fs = require('fs');
+const path = require('path');
 
 const prerequisite = () => {
   //to get node version
@@ -61,6 +62,36 @@ const prerequisite = () => {
   return true;
 };
 
+let UserConfig = undefined;
+try {
+  UserConfig = require('../../customreact.config.json');
+} catch (err) {}
+
+const CheckConfig = () => {
+  if (typeof UserConfig === 'undefined') {
+    console.log(chalk.bgRedBright('Oh there is no config file here'));
+    const yon = prompt('can i install the config file[y/n] ');
+    if (yon === 'Y' || yon === 'y') {
+      const filename = 'customreact.config.json';
+      fs.closeSync(fs.openSync('customreact.config.json', 'w'));
+      fs.readFile(
+        path.join(__dirname, '../template/config.txt'),
+        'utf-8',
+        function (err, data) {
+          if (err) throw err;
+
+          fs.writeFile(filename, data, 'utf-8', function (err) {
+            if (err) throw err;
+            console.log(chalk.green('Created ') + chalk.yellow(filename));
+          });
+        }
+      );
+    }
+  }
+};
+
 module.exports = {
   prerequisite,
+  UserConfig,
+  CheckConfig,
 };
