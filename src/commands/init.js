@@ -7,6 +7,7 @@ const chalk = require('chalk');
 const { UserConfig } = require('../utils/check');
 
 const createafolder = (filename, confirm = true) => {
+  console.log(path.join(__dirname, '../../' + filename));
   if (confirm) {
     if (!fs.existsSync(path.join(__dirname, '../../' + filename)) && confirm) {
       fs.mkdirSync(path.join(__dirname, '../../' + filename));
