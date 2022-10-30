@@ -34,7 +34,6 @@ const init = (program) => {
         .action(() => {
             const currentpath = shell.pwd().stdout;
             console.log(currentpath);
-            console.log("object");
             if (typeof UserConfig !== 'undefined') {
                 const foldername = UserConfig.FolderStructure;
                 createafolder(foldername.MainFolder);

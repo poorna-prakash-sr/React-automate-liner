@@ -9,7 +9,6 @@ if (isEmpty(shell.find('/', 'package.json').stdout)) {
     pkg = require('../../package.json');
 }
 
-
 const prerequisite = () => {
     console.log();
     //to get node version   
