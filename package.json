@@ -1,24 +1,23 @@
 {
-  "name": "automate-generator",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "bin": {
-    "ral": "./bin/index.js"
-  },
-  "dependencies": {
-    "automate-generator": "^1.0.0",
-    "chalk": "^4.1.2",
-    "commander": "^9.4.1",
-    "js-beautify": "^1.14.7",
-    "lodash": "^4.17.21",
-    "prompt-sync": "^4.2.0",
-    "shelljs": "^0.8.5"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "name": "automate-generator",
+    "version": "1.0.2",
+    "description": "",
+    "main": "index.js",
+    "bin": {
+        "ral": "./bin/index.js"
+    },
+    "dependencies": {
+        "chalk": "^4.1.2",
+        "commander": "^9.4.1",
+        "js-beautify": "^1.14.7",
+        "lodash": "^4.17.21",
+        "prompt-sync": "^4.2.0",
+        "shelljs": "^0.8.5"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
 }

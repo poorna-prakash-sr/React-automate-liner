@@ -3,7 +3,7 @@
     {
         "MainFolder": "src",
         "ComponentFolder" : "src/components",
-        "AssetsFolder" : "src/assests",
+        "AssetsFolder" : "src/assets",
         "LayoutFolder" : "src/layout",
         "RouteFolder" : "src/routes",
         "ServicesFolder" : {
@@ -20,6 +20,7 @@
         }
     },
     "React":{
-        "extension" : "js" 
-    }
+        "extension" : "jsx" 
+    },
+    "NeedTestComponent": false
 }

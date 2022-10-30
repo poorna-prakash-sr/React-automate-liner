@@ -1,25 +1,25 @@
 {
-    "FolderStructure":
-    {
-        "MainFolder": "r/src",
-        "ComponentFolder" : "r/src/components",
-        "AssetsFolder" : "r/src/assests",
-        "LayoutFolder" : "r/src/layout",
-        "RouteFolder" : "r/src/routes",
-        "ServicesFolder" : {
-            "path":"r/src/services",
-            "default":false
+    "FolderStructure": {
+        "MainFolder": "src",
+        "ComponentFolder": "src/components",
+        "AssetsFolder": "src/assets",
+        "LayoutFolder": "src/layout",
+        "RouteFolder": "src/routes",
+        "ServicesFolder": {
+            "path": "src/services",
+            "default": false
         },
-        "PagesFolder" : {
-            "path":"r/src/pages",
-            "default":false
+        "PagesFolder": {
+            "path": "src/pages",
+            "default": false
         },
-        "ConfigFolder" : {
-            "path":"r/src/config",
+        "ConfigFolder": {
+            "path": "src/config",
             "default": false
         }
     },
-    "React":{
-        "extension" : "js" 
-    }
+    "React": {
+        "extension": "jsx"
+    },
+    "NeedTestComponent": false
 }
