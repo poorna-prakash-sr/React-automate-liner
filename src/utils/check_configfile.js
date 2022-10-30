@@ -3,15 +3,21 @@ const prompt = require('prompt-sync')();
 var shell = require('shelljs');
 const fs = require('fs');
 const path = require('path');
-const pkg = require(shell.pwd().stdout + '/' + 'package.json');
+const { isEmpty } = require('lodash');
+let pkg = undefined;
+if (isEmpty(shell.find('/', 'package.json').stdout)) {
+    pkg = require('../../package.json');
+}
 
 
 const prerequisite = () => {
-    //to get node version
+    console.log();
+    //to get node version   
     const isnodeavailable = process.version;
     console.log('Node version: ' + chalk.yellowBright(isnodeavailable));
     //to check if react is available or not
-    const isReact = pkg.dependencies.react;
+    const isReact = typeof pkg === 'undefined' ? 'undefined' :
+        pkg.dependencies.react;
     if (typeof isReact === 'undefined') {
         console.log(
             chalk.red(
