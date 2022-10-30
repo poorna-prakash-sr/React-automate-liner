@@ -1,21 +1,21 @@
 {
     "FolderStructure":
     {
-        "MainFolder": "r/src",
-        "ComponentFolder" : "r/src/components",
-        "AssetsFolder" : "r/src/assests",
-        "LayoutFolder" : "r/src/layout",
-        "RouteFolder" : "r/src/routes",
+        "MainFolder": "src",
+        "ComponentFolder" : "src/components",
+        "AssetsFolder" : "src/assests",
+        "LayoutFolder" : "src/layout",
+        "RouteFolder" : "src/routes",
         "ServicesFolder" : {
-            "path":"r/src/services",
+            "path":"src/services",
             "default":false
         },
         "PagesFolder" : {
-            "path":"r/src/pages",
+            "path":"src/pages",
             "default":false
         },
         "ConfigFolder" : {
-            "path":"r/src/config",
+            "path":"src/config",
             "default": false
         }
     },

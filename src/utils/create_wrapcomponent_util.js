@@ -6,9 +6,9 @@ const path = require('path');
 
 const CreateWarp = (componentspath, s, ext, wrap, needtestfile) => {
   if (wrap) {
-    shell.exec('mkdir -p ' + componentspath);
+    shell.mkdir('-p', componentspath);
     shell.cd(componentspath);
-    shell.exec('mkdir -p ' + _.startCase(s));
+    shell.mkdir('-p', _.startCase(s));
     shell.cd(_.startCase(s));
     const filename = _.startCase(s) + '.' + ext;
     const cssfile = _.startCase(s) + '.css';

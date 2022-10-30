@@ -41,7 +41,7 @@ const prerequisite = () => {
           //to create a directory path if not exists and create react project here
           const filepath = fs.statSync(userinput);
           if (filepath.isDirectory()) {
-            shell.exec('mkdir -p ' + userinput);
+            shell.mkdir('-p', userinput);
             shell.cd(userinput);
             const projectname = prompt('Project name ');
             shell.exec('npx create-react-app ' + projectname);
@@ -64,7 +64,8 @@ const prerequisite = () => {
 
 let UserConfig = undefined;
 try {
-  UserConfig = require('../../customreact.config.json');
+  const currentpath = shell.pwd().stdout;
+  UserConfig = require(currentpath + '/customreact.config.json');
 } catch (err) {}
 
 const CheckConfig = () => {

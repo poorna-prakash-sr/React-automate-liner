@@ -5,7 +5,7 @@ const _ = require('lodash');
 const path = require('path');
 
 const CreateConfig = (componentspath, s, ext, needtestfile) => {
-  shell.exec('mkdir -p ' + componentspath);
+  shell.mkdir('-p', componentspath);
   shell.cd(componentspath);
   const filename = _.startCase(s) + '.' + ext;
   try {

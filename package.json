@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "ccl": "./bin/index.js"
+    "ral": "./bin/index.js"
   },
   "dependencies": {
+    "automate-generator": "^1.0.0",
     "chalk": "^4.1.2",
     "commander": "^9.4.1",
     "js-beautify": "^1.14.7",

@@ -4,11 +4,11 @@ var fs = require('fs');
 var beautify = require('js-beautify').js;
 const path = require('path');
 const chalk = require('chalk');
-const { UserConfig } = require('../../utils/check');
-const { CheckConfig } = require('../../utils/check');
-const CreateConfig = require('../../utils/createconfig');
+const { UserConfig } = require('../../utils/check_configfile');
+const { CheckConfig } = require('../../utils/check_configfile');
+const CreateConfig = require('../../utils/create_component_utlil');
 const { isEmpty, lowerCase } = require('lodash');
-const CreateWrap = require('../../utils/createwrap');
+const CreateWrap = require('../../utils/create_wrapcomponent_util');
 
 const createcomponet = (program) => {
   const createComponets = program
@@ -24,7 +24,6 @@ const createcomponet = (program) => {
     .option('-t', 'Create a test file for your component')
     .action((string, options) => {
       if (typeof UserConfig !== 'undefined') {
-        shell.exec('pwd');
         let componentspath = UserConfig.FolderStructure.ComponentFolder;
         if (options.l) {
           componentspath = UserConfig.FolderStructure.LayoutFolder;
@@ -36,7 +35,7 @@ const createcomponet = (program) => {
           typeof UserConfig.React.extension === 'undefined'
             ? 'jsx'
             : UserConfig.React.extension;
-        if (options.w && options.t) {
+        if (options.w) {
           const needtest = options.t ? true : UserConfig.NeedTestComponent;
           CreateWrap(componentspath, string, ext, options.w, needtest);
           return;
@@ -51,6 +50,8 @@ const createcomponet = (program) => {
             )
           );
         }
+      } else {
+        CheckConfig();
       }
     });
 };

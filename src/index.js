@@ -2,9 +2,9 @@ const { Command } = require('commander');
 const program = new Command();
 const _ = require('lodash');
 const cli = require('./commands/info/infocli');
-const checker = require('./utils/check');
+const checker = require('./utils/check_configfile');
 const component = require('./commands/components/components');
-const init = require('./commands/init');
+const init = require('./commands/folder_init');
 
 //To check react is available
 // const toCheckReact = checker.prerequisite();
