@@ -20,10 +20,11 @@ const prerequisite = () => {
   if (typeof isReact === 'undefined') {
     console.log(
       chalk.red(
-        'Package.json was discovered in the current directory! \n The project is already running in the current directory.' +
+        'Package.json was discovered in the current directory!\nThe project is already running in the current directory.' +
           '\n' +
           chalk.green(
-            'Create a new directory and create a new project or Install REACT in the current directory!'
+            chalk.yellow('Create a new directory and create a new project') +
+              '\nInstall REACT in the current directory!'
           )
       )
     );
@@ -63,7 +64,9 @@ const prerequisite = () => {
       }
       return;
     } else if (yesorno === 'n' || yesorno === 'N') {
-      console.log(chalk.yellowBright("So it well it's time to say bye...."));
+      console.log(
+        chalk.yellowBright('Okay see you soon! When you need help call ral!')
+      );
     }
     return;
   }
