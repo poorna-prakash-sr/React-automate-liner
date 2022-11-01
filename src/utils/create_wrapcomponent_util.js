@@ -4,6 +4,7 @@ const shell = require('shelljs');
 const _ = require('lodash');
 const path = require('path');
 
+//raw function to generate wrapcomponent
 const CreateWarp = (componentspath, s, ext, wrap, needtestfile) => {
   if (wrap) {
     shell.mkdir('-p', componentspath);

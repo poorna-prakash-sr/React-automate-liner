@@ -4,6 +4,7 @@ const shell = require('shelljs');
 const _ = require('lodash');
 const path = require('path');
 
+//rae function to create a component template
 const CreateConfig = (componentspath, s, ext, needtestfile) => {
   shell.mkdir('-p', componentspath);
   shell.cd(componentspath);

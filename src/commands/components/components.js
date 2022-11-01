@@ -10,6 +10,7 @@ const CreateConfig = require('../../utils/create_component_utlil');
 const { isEmpty, lowerCase } = require('lodash');
 const CreateWrap = require('../../utils/create_wrapcomponent_util');
 
+// function to create a component
 const createcomponet = (program) => {
   const createComponets = program
     .command('component')
@@ -25,16 +26,24 @@ const createcomponet = (program) => {
     .action((string, options) => {
       if (typeof UserConfig !== 'undefined') {
         let componentspath = UserConfig.FolderStructure.ComponentFolder;
+        if (typeof componentspath === 'undefined') {
+          console.log('Folder Stucture was not found or something went wrong');
+          console.log('Please reinstall the Config File');
+          return;
+        }
+        //option check according to input parameters
         if (options.l) {
           componentspath = UserConfig.FolderStructure.LayoutFolder;
         }
         if (options.r) {
           componentspath = UserConfig.FolderStructure.RouteFolder;
         }
+        //extension check according to the userinput
         const ext =
           typeof UserConfig.React.extension === 'undefined'
             ? 'jsx'
             : UserConfig.React.extension;
+        //option to make a wrapcomponent
         if (options.w) {
           const needtest = options.t ? true : UserConfig.NeedTestComponent;
           CreateWrap(componentspath, string, ext, options.w, needtest);
@@ -44,9 +53,10 @@ const createcomponet = (program) => {
           const needtest = options.t ? true : UserConfig.NeedTestComponent;
           CreateConfig(componentspath, string, ext, needtest);
         } else {
+          //warings message for using illegal extension
           console.log(
             chalk.red(
-              'Your using illegal extension please make it correct you can only able to use JS or JSX to create a file in the react'
+              'Your using illegal extension please make it as correct you can only able to use JS or JSX to create a file in the react'
             )
           );
         }

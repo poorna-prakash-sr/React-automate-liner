@@ -1,6 +1,6 @@
 {
-    "name": "automate-generator",
-    "version": "1.0.5",
+    "name": "ral",
+    "version": "1.0.8-alpha",
     "description": "",
     "main": "index.js",
     "bin": {
