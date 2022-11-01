@@ -1,6 +1,6 @@
 {
-    "name": "ral",
-    "version": "1.0.8-alpha",
+    "name": "react-automater",
+    "version": "1.0.2-alpha",
     "description": "",
     "main": "index.js",
     "bin": {
@@ -14,10 +14,18 @@
         "prompt-sync": "^4.2.0",
         "shelljs": "^0.8.5"
     },
+
+
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "keywords": [],
+    "keywords": ["react","react-cli","react-auto","ral","react-components","components"],
     "author": "",
-    "license": "ISC"
+    "licenses" : [
+    {
+      "type": "MIT",
+      "url": "https://www.opensource.org/licenses/mit-license.php"
+    }
+  ]
+
 }

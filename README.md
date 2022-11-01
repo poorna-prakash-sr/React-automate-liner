@@ -1,2 +1,2 @@
-# React Automate Liner
+# React Automate
 
