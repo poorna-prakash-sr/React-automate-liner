@@ -35,7 +35,6 @@ const init = (program) => {
     .description('Init will create a project structure for you')
     .action(() => {
       const currentpath = shell.pwd().stdout;
-      console.log(currentpath);
       if (typeof UserConfig !== 'undefined') {
         const foldername = UserConfig.FolderStructure;
         createafolder(foldername.MainFolder);
