@@ -1,6 +1,6 @@
 # React Automate Liner (Ral)
 
-React Automate Liner (Ral) automates the process of making directories or folders. You can use the ral command in the cli to make a directory or folder.
+React Automate Liner (Ral) automates the process of making directories or folders. You can use the ral command in the terminal to make a directory or folder.
 
 RAL is a implementation of Unix shell commands portable with Multi-Platform  like Windows/MacOS/Linux
 
